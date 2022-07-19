@@ -1,0 +1,6 @@
+Makefile
+Makefile.sub
+template.html
+README.md
+.git
+.rsync-exclude

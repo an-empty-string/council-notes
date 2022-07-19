@@ -1,0 +1,12 @@
+.PHONY: all index.html
+
+objects := $(patsubst %.md,%.html,$(wildcard *.md))
+all : $(objects)
+
+index.html:
+
+%.html: %.md ../template.html
+	pandoc -s -t html \
+		--template=../template.html \
+		--title-prefix="Tris's City Government Notes" \
+		-c https://tris.fyi/index.css -o $@ $<
